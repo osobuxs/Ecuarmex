@@ -72,7 +72,7 @@ const imagenes = [
 ];
 
 var html = "";
-function renderizarGaleria(imagenes) {
+(function renderizarGaleria(imagenes) {
   imagenes.forEach(function (imagen) {
     html += `
         <div class="galeria-item">
@@ -87,25 +87,22 @@ function renderizarGaleria(imagenes) {
         </div>
       `;
   });
-}
-renderizarGaleria(imagenes);
+})(imagenes);
 document.getElementById("Product_container").innerHTML = html;
 
-{/* <div class="galeria-item">
-          <div class="Div_prod">
-          <img src="${imagen.src}" alt="${imagen.alt}" width="350em" height="300em" />
-          </div>
-          <div class="Div_info">
-          <h3 class="centrar">${imagen.nombre}</h3>
-          <p class="centrar">${imagen.descripcion}</p>
-          <a class="detalles" href="${imagen.ref}"><p class="centrar"><a href="#openModal" class="detalles">Lanzar el modal</a>
-          <div id="openModal" class="modalDialog">
-	    <div>
-		<a href="#close" title="Close" class="close">X</a>
-		<h2>Mi modal</h2>
-		<p>Este es un ejemplo de modal, creado gracias al poder de CSS3.</p>
-		<p>Puedes hacer un montón de cosas aquí, como alertas o incluso crear un formulario de registro aquí mismo.</p>
-	</div>
-</div></p></a>
-          </div>
-        </div> */}
+const scrollNav = [
+  { inicio: "nosotros_nav", target: "nosotros" },
+  { inicio: "productos_nav", target: "Product_container" },
+  { inicio: "contacto_nav", target: "contacto" },
+  { inicio: "localidad_nav", target: "localidad" },
+];
+
+(function addEventNavBar() {
+  scrollNav.forEach(function (element) {
+    document.getElementById(element.inicio).addEventListener("click", () => {
+      document
+        .getElementById(element.target)
+        .scrollIntoView({ behavior: "smooth" });
+    });
+  });
+})();
