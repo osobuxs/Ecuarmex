@@ -7,7 +7,7 @@ const imagenes = [
     ref: "./limon.html",
   },
   {
-    src: "./Assets/Green-Coffe.jpg",
+    src: "./Assets/Green-coffe.jpg",
     alt: "Green_coffe",
     nombre: "Cafe Verde",
     descripcion: "Cafe extraido de las entrañas de hulk",
