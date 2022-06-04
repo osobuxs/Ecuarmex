@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./index.css" />
+   
   </head>
   <body class="Body">
       <!-- NavBar -->
     <nav class="Nav">
       <div>
         <ul class="Nav__Idioma">
-          <li>Esp</li>
-          <li>Ing</li>
-          <li>Chn</li>
+          <li class="Nav__Set"><p style="margin: 0">Esp</p><img src="./Assets/es.svg" alt="Spain" height="20" width="20" ></li>
+          <li class="Nav__Set"><p style="margin: 0">Ing</p><img src="./Assets/en.svg" alt="Uk" height="20" width="20" ></li>
+          <li class="Nav__Set"><p style="margin: 0">Chn</p><img src="./Assets/zh (1).svg" alt="China" height="20" width="20" ></li>
         </ul>
       </div>
       <div><h1 class="Nav_titulo">Ecuarmex</h1></div>
@@ -80,7 +81,7 @@
     </div>
     <span class="Separador"></span>
     <!-- Productos -->
-    <div>PRODUCTOS</div>
+    <div id="Productcontainer" class="Product_container"></div>
     <span class="Separador"></span>
     <!-- Contacto -->
     <div><div id="container">
@@ -136,7 +137,10 @@
     </div>
     <span class="Separador"></span>
     <!-- Footer -->
-    <footer>Rutas de navegacion</footer>
     <div class="Separador"></div>
+    <footer>Rutas de navegacion</footer>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./index.js"></script> -->
+    <script src="./index.js"></script>
   </body>
 </html>

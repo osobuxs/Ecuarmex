@@ -9,6 +9,8 @@
     display: flex;
     flex-direction: column;
     background-color: #f3ddb8;
+    height: auto;
+    width: auto;
 }
 .Nav{
     
@@ -26,6 +28,12 @@
     justify-content: flex-end;
     grid-column-gap: 5%;
 }
+.Nav__Set{
+    display: flex;
+    flex-direction: row;
+    grid-column-gap: 10%;
+    justify-content: center;
+}
 .Nav__Productos{
     list-style: none;
     display: flex;
@@ -36,7 +44,7 @@
 .Nav_titulo{
         text-align: center; 
         font-family: Arial Black; 
-        font-weight: bold; font-size: 5rem; 
+        font-weight: bold; font-size: 75px; 
         background: #ff0000; 
         -webkit-background-clip: text; 
         -moz-background-clip: text; 
@@ -395,4 +403,15 @@ textarea {
   input[type='text'], [type='email'], select, textarea {
     font-size: 0.875em;
   }
+}
+.galeria-item{
+    border: solid 2px red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.Product_container{
+    display: flex;
+    flex-direction: column;
+
 }
